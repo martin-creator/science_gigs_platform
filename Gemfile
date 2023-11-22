@@ -45,6 +45,23 @@ gem "bootsnap", require: false
 # Installing devise for login
 gem 'devise', '~> 4.9'
 
+# Installing bulma for styling
+# gem 'bulma-rails', '~> 0.0.4.1'
+# gem 'bulma-extensions-rails', '~> 6.2', '>= 6.2.7'
+
+gem 'bulma-rails', '~>0.7.4'
+
+gem 'bulma-extensions-rails', '~>1.0.30'
+
+# Notifies the user of errors
+gem 'toastr-rails', '~> 1.0', '>= 1.0.3'
+
+# sassc 
+gem 'sassc'
+
+
+# Gemfile
+
 # Use Sass to process CSS
 # gem "sassc-rails"
 
