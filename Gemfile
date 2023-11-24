@@ -54,10 +54,15 @@ gem 'bulma-rails', '~>0.7.4'
 gem 'bulma-extensions-rails', '~>1.0.30'
 
 # Notifies the user of errors
-gem 'toastr-rails', '~> 1.0', '>= 1.0.3'
+# gem 'toastr-rails', '~> 1.0', '>= 1.0.3'
 
 # sassc 
 gem 'sassc'
+
+# coffee-script
+gem 'coffee-script', '~> 2.4', '>= 2.4.1'
+
+gem 'jquery-rails'
 
 
 # Gemfile
