@@ -5,6 +5,8 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable,
          :omniauthable, omniauth_providers: [:google_oauth2]
 
+  has_one_attached :avatar
+
   def self.from_omniauth(auth)
     user = User.where(email: auth.info.email).first
 
@@ -30,11 +32,11 @@ class User < ApplicationRecord
     end
   end
 
-  def hidden_phone
-    if self.phone && self.phone.length > 3
-      "*" * (self.phone.length - 3) + self.phone.last(3)
-    end
-  end
+  # def hidden_phone
+  #   if self.phone && self.phone.length > 3
+  #     "*" * (self.phone.length - 3) + self.phone.last(3)
+  #   end
+  # end
 end
 
 # def self.from_omniauth(access_token)

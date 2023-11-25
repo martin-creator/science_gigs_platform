@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_11_25_105307) do
+ActiveRecord::Schema[7.0].define(version: 2023_11_25_151632) do
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
     t.string "record_type", null: false
@@ -30,6 +30,37 @@ ActiveRecord::Schema[7.0].define(version: 2023_11_25_105307) do
     t.string "checksum", null: false
     t.datetime "created_at", null: false
     t.index ["key"], name: "index_active_storage_tables_on_key", unique: true
+  end
+
+  create_table "categories", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "gigs", force: :cascade do |t|
+    t.string "title"
+    t.string "video"
+    t.boolean "active", default: false
+    t.boolean "has_single_pricing", default: false
+    t.integer "user_id", null: false
+    t.integer "category_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["category_id"], name: "index_gigs_on_category_id"
+    t.index ["user_id"], name: "index_gigs_on_user_id"
+  end
+
+  create_table "pricings", force: :cascade do |t|
+    t.string "title"
+    t.text "description"
+    t.integer "delivery_time"
+    t.integer "price"
+    t.integer "pricing_type"
+    t.integer "gig_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["gig_id"], name: "index_pricings_on_gig_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -53,4 +84,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_11_25_105307) do
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "gigs", "categories"
+  add_foreign_key "gigs", "users"
+  add_foreign_key "pricings", "gigs"
 end
