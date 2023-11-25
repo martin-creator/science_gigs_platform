@@ -64,6 +64,15 @@ gem 'coffee-script', '~> 2.4', '>= 2.4.1'
 
 gem 'jquery-rails'
 
+# Google authentication
+gem 'omniauth-google-oauth2'
+
+# Figaro for environment variables
+gem "figaro"
+
+# Omniauth for authentication solved the CSRF issue for google authentication
+gem 'omniauth-rails_csrf_protection'
+
 
 # Gemfile
 
