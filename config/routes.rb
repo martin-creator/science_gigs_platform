@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   # root "articles#index"
 
   root 'home#index'
+  get '/dashboard', to: 'users#dashboard'
 
   devise_for :users,
               path: '',
