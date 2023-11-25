@@ -6,6 +6,7 @@ class User < ApplicationRecord
          :omniauthable, omniauth_providers: [:google_oauth2]
 
   has_one_attached :avatar
+  has_many :gigs
 
   def self.from_omniauth(auth)
     user = User.where(email: auth.info.email).first
