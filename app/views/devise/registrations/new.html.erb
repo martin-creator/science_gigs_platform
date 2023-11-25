@@ -32,6 +32,7 @@
                 <%= f.submit "Sign up", class: "button is-danger is-fullwidth m-t-10  m-b-10" %>
               </div>
             <% end %>
+            <%= button_to "Sign in with Google", user_google_oauth2_omniauth_authorize_path, class: "button is-primary is-fullwidth", data: {turbo: "false"}  %>
             <%= render "devise/shared/links" %>
           </div>
         </div>
