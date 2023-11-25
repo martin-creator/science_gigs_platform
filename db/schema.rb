@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_11_25_194228) do
+ActiveRecord::Schema[7.0].define(version: 2023_11_25_200137) do
   create_table "action_text_tables", force: :cascade do |t|
     t.string "name", null: false
     t.text "body"
@@ -48,6 +48,18 @@ ActiveRecord::Schema[7.0].define(version: 2023_11_25_194228) do
     t.datetime "updated_at", null: false
   end
 
+# Could not dump table "comments" because of following StandardError
+#   Unknown type 'uuid' for column 'order_id'
+
+  create_table "conversations", force: :cascade do |t|
+    t.integer "sender_id", null: false
+    t.integer "receiver_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["receiver_id"], name: "index_conversations_on_receiver_id"
+    t.index ["sender_id"], name: "index_conversations_on_sender_id"
+  end
+
   create_table "gigs", force: :cascade do |t|
     t.string "title"
     t.string "video"
@@ -59,6 +71,29 @@ ActiveRecord::Schema[7.0].define(version: 2023_11_25_194228) do
     t.datetime "updated_at", null: false
     t.index ["category_id"], name: "index_gigs_on_category_id"
     t.index ["user_id"], name: "index_gigs_on_user_id"
+  end
+
+  create_table "messages", force: :cascade do |t|
+    t.text "content"
+    t.integer "user_id", null: false
+    t.integer "conversation_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["conversation_id"], name: "index_messages_on_conversation_id"
+    t.index ["user_id"], name: "index_messages_on_user_id"
+  end
+
+  create_table "offers", force: :cascade do |t|
+    t.text "note"
+    t.integer "amount"
+    t.integer "days"
+    t.integer "status", default: 0
+    t.integer "request_id", null: false
+    t.integer "user_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["request_id"], name: "index_offers_on_request_id"
+    t.index ["user_id"], name: "index_offers_on_user_id"
   end
 
   create_table "orders", force: :cascade do |t|
@@ -73,8 +108,10 @@ ActiveRecord::Schema[7.0].define(version: 2023_11_25_194228) do
     t.integer "seller_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "request_id"
     t.index ["buyer_id"], name: "index_orders_on_buyer_id"
     t.index ["gig_id"], name: "index_orders_on_gig_id"
+    t.index ["request_id"], name: "index_orders_on_request_id"
     t.index ["seller_id"], name: "index_orders_on_seller_id"
   end
 
@@ -103,6 +140,37 @@ ActiveRecord::Schema[7.0].define(version: 2023_11_25_194228) do
     t.index ["user_id"], name: "index_requests_on_user_id"
   end
 
+# Could not dump table "reviews" because of following StandardError
+#   Unknown type 'uuid' for column 'order_id'
+
+  create_table "subscriptions", force: :cascade do |t|
+    t.string "plan_id"
+    t.string "sub_id"
+    t.integer "status", default: 0
+    t.date "expired_at"
+    t.integer "user_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_subscriptions_on_user_id"
+  end
+
+  create_table "transactions", force: :cascade do |t|
+    t.integer "status"
+    t.integer "transaction_type"
+    t.float "amount"
+    t.integer "source_type"
+    t.integer "request_id"
+    t.integer "gig_id"
+    t.integer "buyer_id"
+    t.integer "seller_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["buyer_id"], name: "index_transactions_on_buyer_id"
+    t.index ["gig_id"], name: "index_transactions_on_gig_id"
+    t.index ["request_id"], name: "index_transactions_on_request_id"
+    t.index ["seller_id"], name: "index_transactions_on_seller_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -119,17 +187,37 @@ ActiveRecord::Schema[7.0].define(version: 2023_11_25_194228) do
     t.string "provider"
     t.string "uid"
     t.string "image"
+    t.string "phone"
+    t.float "wallet", default: 0.0
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "comments", "orders"
+  add_foreign_key "comments", "users"
+  add_foreign_key "conversations", "users", column: "receiver_id"
+  add_foreign_key "conversations", "users", column: "sender_id"
   add_foreign_key "gigs", "categories"
   add_foreign_key "gigs", "users"
+  add_foreign_key "messages", "conversations"
+  add_foreign_key "messages", "users"
+  add_foreign_key "offers", "requests"
+  add_foreign_key "offers", "users"
   add_foreign_key "orders", "gigs"
+  add_foreign_key "orders", "requests"
   add_foreign_key "orders", "users", column: "buyer_id"
   add_foreign_key "orders", "users", column: "seller_id"
   add_foreign_key "pricings", "gigs"
   add_foreign_key "requests", "categories"
   add_foreign_key "requests", "users"
+  add_foreign_key "reviews", "gigs"
+  add_foreign_key "reviews", "orders"
+  add_foreign_key "reviews", "users", column: "buyer_id"
+  add_foreign_key "reviews", "users", column: "seller_id"
+  add_foreign_key "subscriptions", "users"
+  add_foreign_key "transactions", "gigs"
+  add_foreign_key "transactions", "requests"
+  add_foreign_key "transactions", "users", column: "buyer_id"
+  add_foreign_key "transactions", "users", column: "seller_id"
 end
