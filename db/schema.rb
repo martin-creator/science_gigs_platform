@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_11_25_193815) do
+ActiveRecord::Schema[7.0].define(version: 2023_11_25_194228) do
   create_table "action_text_tables", force: :cascade do |t|
     t.string "name", null: false
     t.text "body"
@@ -61,6 +61,23 @@ ActiveRecord::Schema[7.0].define(version: 2023_11_25_193815) do
     t.index ["user_id"], name: "index_gigs_on_user_id"
   end
 
+  create_table "orders", force: :cascade do |t|
+    t.date "due_date"
+    t.string "title"
+    t.float "amount"
+    t.integer "status", default: 0
+    t.string "seller_name"
+    t.string "buyer_name"
+    t.integer "gig_id", null: false
+    t.integer "buyer_id"
+    t.integer "seller_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["buyer_id"], name: "index_orders_on_buyer_id"
+    t.index ["gig_id"], name: "index_orders_on_gig_id"
+    t.index ["seller_id"], name: "index_orders_on_seller_id"
+  end
+
   create_table "pricings", force: :cascade do |t|
     t.string "title"
     t.text "description"
@@ -71,6 +88,19 @@ ActiveRecord::Schema[7.0].define(version: 2023_11_25_193815) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["gig_id"], name: "index_pricings_on_gig_id"
+  end
+
+  create_table "requests", force: :cascade do |t|
+    t.text "description"
+    t.string "title"
+    t.integer "budget"
+    t.integer "delivery"
+    t.integer "user_id", null: false
+    t.integer "category_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["category_id"], name: "index_requests_on_category_id"
+    t.index ["user_id"], name: "index_requests_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -96,5 +126,10 @@ ActiveRecord::Schema[7.0].define(version: 2023_11_25_193815) do
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "gigs", "categories"
   add_foreign_key "gigs", "users"
+  add_foreign_key "orders", "gigs"
+  add_foreign_key "orders", "users", column: "buyer_id"
+  add_foreign_key "orders", "users", column: "seller_id"
   add_foreign_key "pricings", "gigs"
+  add_foreign_key "requests", "categories"
+  add_foreign_key "requests", "users"
 end
