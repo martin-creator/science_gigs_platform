@@ -1,0 +1,401 @@
+repo_name: martin-creator/science_gigs_platform
+report_id: 4ea19157d35cdfe677fc8e8fdf3f8085
+version: 0.1
+repo_type: Public
+timestamp: '2024-02-04T08:01:25+00:00'
+requested_by: martin-creator
+provider: github
+branch: main
+detected_tools_count: 29
+tools:
+- name: CSS 3
+  description: The latest evolution of the Cascading Style Sheets language
+  website_url: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS3
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Languages
+  image_url: https://img.stackshare.io/service/6727/css.png
+  detection_source_url: https://github.com/martin-creator/science_gigs_platform
+  detection_source: Repo Metadata
+- name: CoffeeScript
+  description: A little language that compiles into JavaScript
+  website_url: http://coffeescript.org/
+  version: 2.4.1
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Languages
+  image_url: https://img.stackshare.io/service/1178/slQydAMv.png
+  detection_source_url: https://github.com/martin-creator/science_gigs_platform/blob/main/Gemfile.lock
+  detection_source: Gemfile
+  last_updated_by: martin-creator
+  last_updated_on: 2023-11-24 20:39:44.000000000 Z
+- name: JavaScript
+  description: Lightweight, interpreted, object-oriented language with first-class
+    functions
+  website_url: https://developer.mozilla.org/en-US/docs/Web/JavaScript
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Languages
+  image_url: https://img.stackshare.io/service/1209/javascript.jpeg
+  detection_source_url: https://github.com/martin-creator/science_gigs_platform
+  detection_source: Repo Metadata
+- name: Ruby
+  description: A dynamic, interpreted, open source programming language with a focus
+    on simplicity and productivity
+  website_url: https://www.ruby-lang.org
+  version: 3.1.0
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Languages
+  image_url: https://img.stackshare.io/service/989/ruby.png
+  detection_source_url: https://github.com/martin-creator/science_gigs_platform/blob/main/Gemfile.lock
+  detection_source: Repo Metadata
+  last_updated_by: martin-creator
+  last_updated_on: 2023-11-22 20:54:18.000000000 Z
+- name: Bulma
+  description: Free, open source, &amp; modern CSS framework based on Flexbox
+  website_url: http://bulma.io/
+  version: 0.7.5
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Front-End Frameworks
+  image_url: https://img.stackshare.io/service/5204/bulma-logo.png
+  detection_source_url: https://github.com/martin-creator/science_gigs_platform/blob/main/Gemfile.lock
+  detection_source: Gemfile
+  last_updated_by: martin-creator
+  last_updated_on: 2023-11-22 23:06:58.000000000 Z
+- name: Rails
+  description: Web development that doesn't hurt
+  website_url: http://rubyonrails.org/
+  version: 7.0.8
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Frameworks (Full Stack)
+  image_url: https://img.stackshare.io/service/990/x57_Lorv.png
+  detection_source_url: https://github.com/martin-creator/science_gigs_platform/blob/main/Gemfile.lock
+  detection_source: Gemfile
+  last_updated_by: martin-creator
+  last_updated_on: 2023-11-25 10:13:36.000000000 Z
+- name: jQuery
+  description: The Write Less, Do More, JavaScript Library.
+  website_url: http://jquery.com/
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Javascript UI Libraries
+  image_url: https://img.stackshare.io/service/1021/lxEKmMnB_400x400.jpg
+  detection_source_url: https://github.com/martin-creator/science_gigs_platform/blob/main/Gemfile
+  detection_source: Gemfile
+  last_updated_by: martin-creator
+  last_updated_on: 2023-11-24 20:39:44.000000000 Z
+- name: Redis
+  description: Open source (BSD licensed), in-memory data structure store
+  website_url: http://redis.io/
+  version: 4.8.1
+  license: BSD-3-Clause
+  open_source: true
+  hosted_saas: false
+  category: Data Stores
+  sub_category: In-Memory Databases
+  image_url: https://img.stackshare.io/service/1031/default_cbce472cd134adc6688572f999e9122b9657d4ba.png
+  detection_source_url: https://github.com/martin-creator/science_gigs_platform/blob/main/Gemfile.lock
+  detection_source: Gemfile
+  last_updated_by: martin-creator
+  last_updated_on: 2023-11-22 20:54:18.000000000 Z
+- name: SQLite
+  description: A software library that implements a self-contained, serverless, zero-configuration,
+    transactional SQL database engine
+  website_url: http://www.sqlite.org/
+  open_source: false
+  hosted_saas: true
+  category: Data Stores
+  sub_category: Databases
+  image_url: https://img.stackshare.io/service/1071/sqlite.jpg
+  detection_source_url: https://github.com/martin-creator/science_gigs_platform/blob/main/Gemfile
+  detection_source: Gemfile
+  last_updated_by: martin-creator
+  last_updated_on: 2023-11-22 20:54:18.000000000 Z
+- name: Capybara
+  description: Acceptance test framework for web applications
+  website_url: http://jnicklas.github.io/capybara/
+  version: 3.39.2
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Testing Frameworks
+  image_url: https://img.stackshare.io/service/2595/capybara.png
+  detection_source_url: https://github.com/martin-creator/science_gigs_platform/blob/main/Gemfile.lock
+  detection_source: Gemfile
+  last_updated_by: martin-creator
+  last_updated_on: 2023-11-22 20:54:18.000000000 Z
+- name: Git
+  description: Fast, scalable, distributed revision control system
+  website_url: http://git-scm.com/
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Version Control System
+  image_url: https://img.stackshare.io/service/1046/git.png
+  detection_source_url: https://github.com/martin-creator/science_gigs_platform
+  detection_source: Repo Metadata
+- name: Puma
+  description: A Modern, Concurrent Web Server for Ruby
+  website_url: http://puma.io/
+  version: 5.6.7
+  license: BSD-3-Clause
+  open_source: true
+  hosted_saas: false
+  category: Application Hosting
+  sub_category: Web Servers
+  image_url: https://img.stackshare.io/service/1055/favicon.png
+  detection_source_url: https://github.com/martin-creator/science_gigs_platform/blob/main/Gemfile.lock
+  detection_source: Gemfile
+  last_updated_by: martin-creator
+  last_updated_on: 2023-11-22 20:54:18.000000000 Z
+- name: RubyGems
+  description: Easily download, install, and use ruby software packages on your system
+  website_url: https://rubygems.org/
+  open_source: false
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Package Managers
+  image_url: https://img.stackshare.io/service/12795/5jL6-BA5_400x400.jpeg
+  detection_source_url: https://github.com/martin-creator/science_gigs_platform/blob/main/Gemfile
+  detection_source: Gemfile
+  last_updated_by: martin-creator
+  last_updated_on: 2023-11-22 20:54:18.000000000 Z
+- name: Heroku
+  description: Build, deliver, monitor and scale web apps and APIs with a trail blazing
+    developer experience.
+  website_url: https://www.heroku.com
+  open_source: false
+  hosted_saas: true
+  category: Application Hosting
+  sub_category: Platform as a Service
+  image_url: https://img.stackshare.io/service/133/3wgIDj3j.png
+  detection_source_url: https://github.com/martin-creator/science_gigs_platform/blob/main/Gemfile
+  detection_source: Gemfile
+  last_updated_by: martin-creator
+  last_updated_on: 2023-11-22 20:54:18.000000000 Z
+- name: Twilio SendGrid
+  description: Email Delivery. Simplified.
+  website_url: http://sendgrid.com
+  open_source: false
+  hosted_saas: true
+  category: Communications
+  sub_category: Transactional Email
+  image_url: https://img.stackshare.io/service/43/kQ_6nwmP.jpg
+  detection_source_url: https://github.com/martin-creator/science_gigs_platform/blob/main/config/environments/production.rb
+  detection_source: config/environments/production.rb
+  last_updated_by: martin-creator
+  last_updated_on: 2023-11-22 20:54:18.000000000 Z
+- name: Bootsnap
+  description: Boot large ruby/rails apps faster, by Shopify
+  website_url: https://github.com/shopify/bootsnap
+  version: 1.17.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Application Utilities
+  sub_category: Ruby Utilities
+  image_url: https://img.stackshare.io/no-img-open-source.png
+  detection_source_url: https://github.com/martin-creator/science_gigs_platform/blob/main/Gemfile.lock
+  detection_source: Gemfile
+  last_updated_by: martin-creator
+  last_updated_on: 2023-11-22 20:54:18.000000000 Z
+- name: Devise
+  description: Flexible authentication solution for Rails with Warden
+  website_url: https://github.com/plataformatec/devise
+  version: 4.9.3
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Application Utilities
+  sub_category: User Management and Authentication
+  image_url: https://img.stackshare.io/service/1432/devise.png
+  detection_source_url: https://github.com/martin-creator/science_gigs_platform/blob/main/Gemfile.lock
+  detection_source: Gemfile
+  last_updated_by: martin-creator
+  last_updated_on: 2023-11-22 21:36:04.000000000 Z
+- name: OmniAuth
+  description: OmniAuth is a flexible authentication system utilizing Rack middleware.
+  website_url: https://github.com/intridea/omniauth
+  version: 2.1.1
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Application Utilities
+  sub_category: User Management and Authentication
+  image_url: https://img.stackshare.io/service/1433/omniauth.png
+  detection_source_url: https://github.com/martin-creator/science_gigs_platform/blob/main/Gemfile.lock
+  detection_source: Gemfile
+  last_updated_by: martin-creator
+  last_updated_on: 2023-11-25 10:13:36.000000000 Z
+- name: coffee-script
+  description: Ruby CoffeeScript is a bridge to the JS CoffeeScript compiler
+  package_url: https://rubygems.org/coffee-script
+  version: 2.4.1
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: RubyGems Packages
+  image_url: https://img.stackshare.io/package/18979/default_eb163f66039a75cd168fad8a88ccdb68b82bccff.png
+  detection_source_url: https://github.com/martin-creator/science_gigs_platform/blob/main/Gemfile.lock
+  detection_source: Gemfile
+  last_updated_by: martin-creator
+  last_updated_on: 2023-11-24 20:39:44.000000000 Z
+- name: figaro
+  description: Simple
+  package_url: https://rubygems.org/figaro
+  version: 1.2.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: RubyGems Packages
+  image_url: https://img.stackshare.io/package/19607/default_ad0710c65b106932707389deb3b2e0b93a1ef7b6.png
+  detection_source_url: https://github.com/martin-creator/science_gigs_platform/blob/main/Gemfile.lock
+  detection_source: Gemfile
+  last_updated_by: martin-creator
+  last_updated_on: 2023-11-25 10:13:36.000000000 Z
+- name: jbuilder
+  description: Create JSON structures via a Builder-style DSL
+  package_url: https://rubygems.org/jbuilder
+  version: 2.11.5
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: RubyGems Packages
+  image_url: https://img.stackshare.io/package/19105/default_fca7ffebc4c078263714788a3e4853bf74bde297.png
+  detection_source_url: https://github.com/martin-creator/science_gigs_platform/blob/main/Gemfile.lock
+  detection_source: Gemfile
+  last_updated_by: martin-creator
+  last_updated_on: 2023-11-22 20:54:18.000000000 Z
+- name: jquery-rails
+  description: This gem provides jQuery and the jQuery-ujs driver for your Rails 4+
+    application
+  package_url: https://rubygems.org/jquery-rails
+  version: 4.6.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: RubyGems Packages
+  image_url: https://img.stackshare.io/package/18864/default_96cb61a9c0f8ef41b80df83209dca4f4c229184e.png
+  detection_source_url: https://github.com/martin-creator/science_gigs_platform/blob/main/Gemfile.lock
+  detection_source: Gemfile
+  last_updated_by: martin-creator
+  last_updated_on: 2023-11-25 10:13:36.000000000 Z
+- name: omniauth-google-oauth2
+  description: A Google OAuth2 strategy for OmniAuth 1.x
+  package_url: https://rubygems.org/omniauth-google-oauth2
+  version: 1.1.1
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: RubyGems Packages
+  image_url: https://img.stackshare.io/package/rubygems/image.png
+  detection_source_url: https://github.com/martin-creator/science_gigs_platform/blob/main/Gemfile.lock
+  detection_source: Gemfile
+  last_updated_by: martin-creator
+  last_updated_on: 2023-11-25 10:13:36.000000000 Z
+- name: sassc
+  description: Use libsass with Ruby!
+  package_url: https://rubygems.org/sassc
+  version: 2.4.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: RubyGems Packages
+  image_url: https://img.stackshare.io/package/19530/default_613f4a81e068e079bd9a85743fffda50ec58cc62.png
+  detection_source_url: https://github.com/martin-creator/science_gigs_platform/blob/main/Gemfile.lock
+  detection_source: Gemfile
+  last_updated_by: martin-creator
+  last_updated_on: 2023-11-22 23:06:58.000000000 Z
+- name: selenium-webdriver
+  description: WebDriver is a tool for writing automated tests of websites
+  package_url: https://rubygems.org/selenium-webdriver
+  version: 4.10.0
+  license: Apache-2.0
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: RubyGems Packages
+  image_url: https://img.stackshare.io/package/18901/default_f0ad2b1ffbe10fdd866f9f8e5f812599d9e8085b.png
+  detection_source_url: https://github.com/martin-creator/science_gigs_platform/blob/main/Gemfile.lock
+  detection_source: Gemfile
+  last_updated_by: martin-creator
+  last_updated_on: 2023-11-22 20:54:18.000000000 Z
+- name: sprockets-rails
+  description: Sprockets Rails integration
+  package_url: https://rubygems.org/sprockets-rails
+  version: 3.4.2
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: RubyGems Packages
+  image_url: https://img.stackshare.io/package/19198/default_be4b4d308c5637e0747ed40c613027452d6ef0c5.png
+  detection_source_url: https://github.com/martin-creator/science_gigs_platform/blob/main/Gemfile.lock
+  detection_source: Gemfile
+  last_updated_by: martin-creator
+  last_updated_on: 2023-11-25 10:13:36.000000000 Z
+- name: sqlite3
+  description: This module allows Ruby programs to interface with the SQLite3 database
+    engine
+  package_url: https://rubygems.org/sqlite3
+  version: 1.6.8
+  license: BSD-3-Clause
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: RubyGems Packages
+  image_url: https://img.stackshare.io/package/18820/default_6564ae059af6c4ea7065fd2329370c7a05341cf8.png
+  detection_source_url: https://github.com/martin-creator/science_gigs_platform/blob/main/Gemfile.lock
+  detection_source: Gemfile
+  last_updated_by: martin-creator
+  last_updated_on: 2023-11-22 20:54:18.000000000 Z
+- name: web-console
+  description: A debugging tool for your Ruby on Rails applications
+  package_url: https://rubygems.org/web-console
+  version: 4.2.1
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: RubyGems Packages
+  image_url: https://img.stackshare.io/package/rubygems/image.png
+  detection_source_url: https://github.com/martin-creator/science_gigs_platform/blob/main/Gemfile.lock
+  detection_source: Gemfile
+  last_updated_by: martin-creator
+  last_updated_on: 2023-11-22 20:54:18.000000000 Z
+- name: webdrivers
+  description: Run Selenium tests more easily with install and updates for all supported
+    webdrivers
+  package_url: https://rubygems.org/webdrivers
+  version: 5.3.1
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: RubyGems Packages
+  image_url: https://img.stackshare.io/package/19420/default_16904f646648128b821ee8aabb068fa7a1b5025f.png
+  detection_source_url: https://github.com/martin-creator/science_gigs_platform/blob/main/Gemfile.lock
+  detection_source: Gemfile
+  last_updated_by: martin-creator
+  last_updated_on: 2023-11-22 20:54:18.000000000 Z
